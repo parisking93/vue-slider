@@ -3,3 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.box-img {
+    height: 80vh;
+    min-height: 400px;
+}
+.box-img img {
+    height: 100%;
+}
+.box-arrow {
+    margin: 0 10px;
+}
+.box-arrow i {
+   font-size: 24px;
+}
+.box-circle{
+    display: flex;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    align-self: flex-end;
+    margin-bottom: 15vh;
+    border-radius: 15px;
+}
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 10px;
+
+}
