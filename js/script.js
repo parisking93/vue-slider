@@ -14,6 +14,9 @@ const app = new Vue(
              prev : function() {
                 (this.counter == 0) ? this.counter = this.images.length -1 : this.counter--;
                 console.log(this.counter,this.images.length - 1);
+            },
+            cambia : function(indice) {
+                this.counter = indice
             }
          }
     }

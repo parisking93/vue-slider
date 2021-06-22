@@ -21,10 +21,7 @@
             <i  class="fas fa-chevron-right"></i>
         </div>
         <div class="box-circle">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+            <div :class="(index ==counter) ? 'active blue' : ''" v-for="(item,index) in images" @click="cambia(index)" class="circle"></div>
         </div>
     </div>
     <script src="js/script.js"></script>
