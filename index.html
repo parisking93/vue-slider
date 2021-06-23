@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container" id="app">
+    <div class="container" id="app" >
         <div class="box-arrow" @click="prev">
             <i class="fas fa-chevron-left"></i>
         </div>
         <div class="box-img">
-            <img :src="images[counter]" alt="slider">
+            <img :src="images[counter]" alt="slider" >
         </div>
         <div class="box-arrow" @click="next" >
             <i  class="fas fa-chevron-right"></i>
         </div>
         <div class="box-circle">
-            <div :class="(index ==counter) ? 'active blue' : ''" v-for="(item,index) in images" @click="cambia(index)" class="circle"></div>
+            <div :class="(index == counter) ? 'active blue' : 'no-show'" v-for="(item,index) in images" @click="cambia(index)" class="circle"></div>
         </div>
+        <button v-if="autoplay" @click="stop" >Autoplay Off</button>
+        <button v-else @click="set">Autoplay On</button>
     </div>
     <script src="js/script.js"></script>
 </body>
